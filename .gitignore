@@ -1,0 +1,44 @@
+# Python specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+
+# Virtual environment
+venv/
+.env/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Dependency directories
+node_modules/
+
+# Environment variables
+.env
+
+# Test reports
+coverage/
+nosetests.xml
+test-results.xml
+*.cover
+*.log
+
+# Pytest
+.pytest_cache/
+
+# Migrations
+alembic/
+migrations/
+app/__pycache__/
+.coverage
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

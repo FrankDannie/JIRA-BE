@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pytest
+pytest-asyncio
+httpx
+black
+isort
+flake8
