@@ -1,9 +1,10 @@
 [tool.poetry]
-name = "jira-be"
+name = "JIRA-BE"
 version = "0.1.0"
 description = "A backend application for managing a tool similar to Jira or Trello"
 authors = ["FrankDannie <frank.dannie@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10,<3.12"
@@ -21,6 +22,10 @@ pytest-cov = "^4.1.0"
 aiofiles = "^0.8.0"
 python-dateutil = "^2.9.0"
 apscheduler = "^3.10.4"
+python-jose = "^3.3.0"
+passlib = "^1.7.4"
+pydantic-settings = "^2.4.0"
+python-multipart = "^0.0.9"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.5.1"
