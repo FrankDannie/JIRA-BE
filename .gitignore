@@ -37,6 +37,7 @@ alembic/
 migrations/
 app/__pycache__/
 .coverage
+uploads/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
