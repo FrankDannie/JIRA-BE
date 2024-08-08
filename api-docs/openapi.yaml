@@ -328,6 +328,33 @@ paths:
       responses:
         '201':
           description: Comment created
+    put:
+      tags:
+        - comments
+      summary: Update a new comment
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: taskId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+      responses:
+        '200':
+          description: Comment updated
 
   /api/v1/projects/{projectId}/tasks/{taskId}/attachments/:
     post:
