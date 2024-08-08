@@ -2,6 +2,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.api import router as api_router
 from app.db.base import Base, engine
+from app.models.user import User  
+from app.models.attachment import Attachment
+from app.models.comment import Comment
+from app.models.task import Task
+from app.models.notification import Notification
+from app.models.project import Project
 
 app = FastAPI()
 
