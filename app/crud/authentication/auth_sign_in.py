@@ -9,6 +9,7 @@ def auth_sign_in(db: Session, user_in: UserCreate) -> User:
         username=user_in.username,
         email=user_in.email,
         hashed_password=hashed_password,
+        role=user_in.role
     )
     db.add(user)
     db.commit()
