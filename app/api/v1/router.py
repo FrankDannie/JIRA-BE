@@ -18,6 +18,7 @@ from app.api.v1.endpoints.comments.get_comment import (router as get_comment_rou
 from app.api.v1.endpoints.comments.post_comment import (router as post_comment_router)
 from app.api.v1.endpoints.comments.put_comments import (router as put_comment_router)
 from app.api.v1.endpoints.attachments.post_attachments import (router as post_attachments_router)
+from app.api.v1.endpoints.attachments.get_attachments import (router as get_attachments_router)
 
 router = APIRouter()
 
@@ -48,3 +49,4 @@ router.include_router(put_comment_router, prefix="", tags=["comments/"])
 
 # Attachment
 router.include_router(post_attachments_router, prefix="", tags=["comments/"])
+router.include_router(get_attachments_router, prefix="", tags=["comments/"])
