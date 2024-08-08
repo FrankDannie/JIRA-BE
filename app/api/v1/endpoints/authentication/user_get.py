@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.db.session import get_db
-from app.schemas.authentication.user_get import UserOut  # Assuming you have a schema for the user output
-from app.services.authentication.user_get import get_current_user  # Dependency to get the current user
+from app.schemas.authentication.user_get import UserOut
+from app.services.authentication.user_get import get_current_user  
 
 router = APIRouter()
 
