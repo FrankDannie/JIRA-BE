@@ -3,9 +3,10 @@ from datetime import datetime
 from typing import List
 
 class ProjectOut(BaseModel):
-    id: str
+    id: int
     name: str
     description: str
+    created_by: str
     created_at: datetime
     updated_at: datetime
 
