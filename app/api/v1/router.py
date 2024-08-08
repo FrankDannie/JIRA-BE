@@ -12,6 +12,7 @@ from app.api.v1.endpoints.projects.delete_project_id import (router as delete_pr
 from app.api.v1.endpoints.tasks.get_tasks import (router as get_tasks_router)
 from app.api.v1.endpoints.tasks.post_tasks import (router as post_tasks_router)
 from app.api.v1.endpoints.tasks.get_task_id import (router as get_task_id_router)
+from app.api.v1.endpoints.tasks.put_task_id import (router as put_task_id_router)
 
 router = APIRouter()
 
@@ -32,3 +33,4 @@ router.include_router(delete_project_id_router, prefix="", tags=["projects/"])
 router.include_router(get_tasks_router, prefix="", tags=["tasks/"])
 router.include_router(post_tasks_router, prefix="", tags=["tasks/"])
 router.include_router(get_task_id_router, prefix="", tags=["tasks/"])
+router.include_router(put_task_id_router, prefix="", tags=["tasks/"])
