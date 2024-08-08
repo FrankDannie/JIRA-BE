@@ -21,6 +21,7 @@ from app.api.v1.endpoints.attachments.post_attachments import (router as post_at
 from app.api.v1.endpoints.attachments.get_attachments import (router as get_attachments_router)
 from app.api.v1.endpoints.attachments.delete_attachments import (router as delete_attachments_router)
 from app.api.v1.endpoints.notifications.get_notification import (router as get_notification_router)
+from app.api.v1.endpoints.notifications.put_notification import (router as put_notification_router)
 
 router = APIRouter()
 
@@ -56,3 +57,4 @@ router.include_router(delete_attachments_router, prefix="", tags=["attachments/"
 
 # Notification
 router.include_router(get_notification_router, prefix="", tags=["notifications/"])
+router.include_router(put_notification_router, prefix="", tags=["notifications/"])
