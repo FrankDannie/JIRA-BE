@@ -14,6 +14,7 @@ from app.api.v1.endpoints.tasks.post_tasks import (router as post_tasks_router)
 from app.api.v1.endpoints.tasks.get_task_id import (router as get_task_id_router)
 from app.api.v1.endpoints.tasks.put_task_id import (router as put_task_id_router)
 from app.api.v1.endpoints.tasks.delete_task_id import (router as delete_task_id_router)
+from app.api.v1.endpoints.comments.get_comment import (router as get_comment_router)
 
 router = APIRouter()
 
@@ -36,3 +37,6 @@ router.include_router(post_tasks_router, prefix="", tags=["tasks/"])
 router.include_router(get_task_id_router, prefix="", tags=["tasks/"])
 router.include_router(put_task_id_router, prefix="", tags=["tasks/"])
 router.include_router(delete_task_id_router, prefix="", tags=["tasks/"])
+
+# Comment
+router.include_router(get_comment_router, prefix="", tags=["comments/"])
