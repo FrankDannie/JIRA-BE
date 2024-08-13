@@ -8,7 +8,7 @@ class TaskCreate(BaseModel):
     status: str
     priority: str
     deadline: Optional[date] = None
-    assigned_to: Optional[int] = None
+    assigned_to: Optional[str] = None
 
 class TaskOut(BaseModel):
     id: int
