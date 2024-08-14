@@ -357,6 +357,29 @@ paths:
           description: Comment updated
 
   /api/v1/projects/{projectId}/tasks/{taskId}/attachments/:
+    get:
+      tags:
+        - attachments
+      summary: Get a file attachment
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: taskId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: attachmentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: File attachment details
     post:
       tags:
         - attachments
@@ -387,29 +410,6 @@ paths:
           description: File uploaded
 
   /api/v1/projects/{projectId}/tasks/{taskId}/attachments/{attachmentId}/:
-    get:
-      tags:
-        - attachments
-      summary: Get a file attachment
-      parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: taskId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: attachmentId
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          description: File attachment details
     delete:
       tags:
         - attachments

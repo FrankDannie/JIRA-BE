@@ -7,9 +7,9 @@ from app.schemas.attachments.get_attachments import AttachmentOut
 
 router = APIRouter()
 
-@router.get("/projects/{projectId}/tasks/{taskId}/attachments/{attachmentId}/", response_model=AttachmentOut, tags=["attachments"], summary="Get a file attachment")
-async def get_file_attachment(projectId: int, taskId: int, attachmentId: int, db: Session = Depends(get_db), current_user: int = Depends(get_current_user)):
+@router.get("/projects/{projectId}/tasks/{taskId}/attachments/", response_model=AttachmentOut, tags=["attachments"], summary="Get a file attachment")
+async def get_file_attachment(projectId: int, taskId: int, db: Session = Depends(get_db), current_user: int = Depends(get_current_user)):
     try:
-        return fetch_attachment(db, attachmentId)
+        return fetch_attachment(db, projectId, taskId)
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
