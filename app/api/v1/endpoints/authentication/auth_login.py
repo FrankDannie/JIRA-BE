@@ -13,4 +13,5 @@ def auth_login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = D
     if not user:
         raise HTTPException(status_code=400, detail="Incorrect username or password")
     access_token = create_access_token(data={"sub": user.username})
-    return {"access_token": access_token, "token_type": "bearer"}
+    print(access_token)
+    return {"token": access_token, "token_type": "bearer"}
