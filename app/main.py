@@ -16,7 +16,7 @@ Base.metadata.create_all(bind=engine)
 
 # CORS configuration
 origins = [
-    "http://localhost:3000",
+    "https://master.d1lswex6c2jyh0.amplifyapp.com"
 ]
 
 app.add_middleware(
