@@ -8,7 +8,7 @@ class TaskUpdate(BaseModel):
     status: Optional[str] = None
     priority: Optional[str] = None
     deadline: Optional[date] = None
-    assigned_to: Optional[int] = None
+    assigned_to: Optional[str] = None
 
 class TaskOut(BaseModel):
     id: int
@@ -18,7 +18,7 @@ class TaskOut(BaseModel):
     priority: str
     deadline: Optional[date]
     project_id: int
-    assigned_to: Optional[int]
+    assigned_to: Optional[str]
     created_at: datetime
     updated_at: datetime
 
