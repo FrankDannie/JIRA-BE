@@ -7,8 +7,8 @@ class ProjectOut(BaseModel):
     name: str
     description: str
     created_by: str
-    created_at: datetime
-    updated_at: datetime
+    start_date: datetime
+    end_date: datetime
 
     class Config:
         orm_mode = True
